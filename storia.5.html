@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosalind Franklin</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#b7e4c7,#95d5b2,#74c69d);
+    color:#1a1a1a;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px 30px;
+    color:#0b3d2e;
+}
+
+header h1{
+    font-size:55px;
+    margin:0;
+}
+
+header p{
+    font-size:18px;
+    font-style:italic;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* HERO */
+
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    background:rgba(255,255,255,0.25);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+.hero img{
+    width:100%;
+    max-width:320px;
+    border-radius:18px;
+    transition:0.4s;
+}
+
+.hero img:hover{
+    transform:scale(1.05);
+}
+
+.hero-text{
+    flex:1;
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.06);
+}
+
+.timeline{
+    margin-top:40px;
+}
+
+.timeline h2{
+    text-align:center;
+    color:#0b3d2e;
+}
+
+.event{
+    background:rgba(255,255,255,0.25);
+    margin:10px 0;
+    padding:15px;
+    border-radius:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Rosalind Franklin</h1>
+    <p>La scienziata dimenticata del DNA</p>
+</header>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <img src="immagine5.jpg" alt="Rosalind Franklin">
+
+        <div class="hero-text">
+
+            Rosalind Franklin è una fisica e chimica britannica, protagonista fondamentale nello studio del DNA.  
+            È uno dei casi più noti di “effetto Matilda”, cioè la mancata attribuzione del merito scientifico alle donne.  
+            <br><br>
+
+            Nel laboratorio del King’s College di Londra ottenne immagini estremamente precise del DNA tramite diffrazione a raggi X.  
+            La sua celebre “Foto 51” fu decisiva per la scoperta della doppia elica, ma venne utilizzata senza il suo consenso.
+
+        </div>
+
+    </div>
+
+    <!-- IMMAGINI -->
+    <div class="gallery">
+
+        <img src="immagine.8.jpg" alt="Ricerca DNA">
+        <img src="immagine.10.jpg" alt="Struttura DNA">
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+
+        <h2>La sua storia</h2>
+
+        <div class="event">
+            Rosalind lavora al King’s College e studia il DNA con i raggi X.
+        </div>
+
+        <div class="event">
+            Wilkins, Watson e Crick utilizzano i suoi dati senza permesso.
+        </div>
+
+        <div class="event">
+            La scoperta della doppia elica viene pubblicata su Nature.
+        </div>
+
+        <div class="event">
+            Rosalind continua gli studi sui virus al Birkbeck Laboratory.
+        </div>
+
+        <div class="event">
+            Il suo contributo viene riconosciuto solo anni dopo.
+        </div>
+
+        <div class="event">
+            Muore nel 1958 per tumore ovarico legato ai raggi X.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

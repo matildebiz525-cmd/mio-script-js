@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Rosalind Franklin</title>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+    body{
+        margin:0;
+        font-family:'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #bfe6cc, #e9f8ef);
+        color:#222;
+        transition:0.4s;
+    }
+
+    body.dark{
+        background:#121212;
+        color:#eee;
+    }
+
+    nav{
+        position:fixed;
+        top:0;
+        width:100%;
+        background:rgba(255,255,255,0.7);
+        backdrop-filter: blur(10px);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 20px;
+        z-index:1000;
+    }
+
+    body.dark nav{
+        background:rgba(20,20,20,0.8);
+    }
+
+    nav h3{
+        margin:0;
+    }
+
+    nav button{
+        padding:8px 12px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        background:#0b5c3b;
+        color:white;
+    }
+
+    header{
+        text-align:center;
+        padding:120px 20px 20px;
+    }
+
+    h1{
+        font-size:2.8em;
+        margin-bottom:10px;
+    }
+
+    .typewriter{
+        font-style:italic;
+        color:#444;
+        border-right:2px solid;
+        display:inline-block;
+        white-space:nowrap;
+        overflow:hidden;
+    }
+
+    .hero{
+        display:flex;
+        justify-content:center;
+        margin:20px 0 40px;
+    }
+
+    .hero img{
+        width:260px;
+        border-radius:20px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    #container{
+        max-width:900px;
+        margin:0 auto;
+        padding:20px;
+    }
+
+    .card{
+        background:rgba(255,255,255,0.75);
+        backdrop-filter: blur(10px);
+        padding:25px;
+        margin-bottom:25px;
+        border-radius:18px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.15);
+        opacity:0;
+        transform:translateY(30px);
+        transition:0.8s;
+    }
+
+    body.dark .card{
+        background:rgba(30,30,30,0.8);
+    }
+
+    .card.show{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    h2{
+        color:#0b5c3b;
+    }
+
+    body.dark h2{
+        color:#7fe0b5;
+    }
+
+    ul{
+        padding-left:20px;
+        line-height:1.6;
+    }
+
+    footer{
+        text-align:center;
+        padding:30px;
+        font-size:14px;
+        opacity:0.7;
+    }
+    `;
+
+    document.head.appendChild(style);
+
+    // NAV
+    const nav = document.createElement("nav");
+    nav.innerHTML = `
+        <h3>Rosalind Franklin</h3>
+        <button id="toggle">Dark Mode</button>
+    `;
+    document.body.appendChild(nav);
+
+    document.getElementById("toggle").onclick = () => {
+        document.body.classList.toggle("dark");
+    };
+
+    // HEADER
+    const header = document.createElement("header");
+
+    header.innerHTML = `
+        <h1>Rosalind Franklin</h1>
+        <div class="typewriter" id="type"></div>
+    `;
+
+    document.body.appendChild(header);
+
+    const text = "Scienziata fondamentale per la scoperta del DNA";
+    let i = 0;
+
+    function typeWriter(){
+        if(i < text.length){
+            document.getElementById("type").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 40);
+        }
+    }
+    typeWriter();
+
+    // IMMAGINE (MODIFICATA)
+    const hero = document.createElement("div");
+    hero.className = "hero";
+
+    hero.innerHTML = `
+        <img src="immagine6.jpg.jfif" alt="Rosalind Franklin">
+    `;
+
+    document.body.appendChild(hero);
+
+    // CONTENUTO
+    const container = document.createElement("div");
+    container.id = "container";
+
+    const sections = [
+        {
+            title:"Difficoltà principali",
+            content:`
+            <ul>
+                <li>Discriminazione di genere negli anni ’40 e ’50 nella ricerca scientifica.</li>
+                <li>Rapporti difficili con Maurice Wilkins al King’s College.</li>
+                <li>Uso non autorizzato dei dati sperimentali (Foto 51).</li>
+                <li>Morte prematura nel 1958 a soli 37 anni.</li>
+            </ul>`
+        },
+        {
+            title:"Riconoscimento",
+            content:`
+            <ul>
+                <li>Premio Nobel 1962 a Watson, Crick e Wilkins.</li>
+                <li>Non inclusa perché il Nobel non è assegnato postumo.</li>
+                <li>Oggi è considerata una figura chiave della biologia molecolare.</li>
+                <li>Simbolo delle difficoltà delle donne nella scienza.</li>
+            </ul>`
+        }
+    ];
+
+    sections.forEach(s=>{
+        const card = document.createElement("div");
+        card.className="card";
+        card.innerHTML = `<h2>${s.title}</h2>${s.content}`;
+        container.appendChild(card);
+    });
+
+    document.body.appendChild(container);
+
+    // ANIMAZIONI
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                e.target.classList.add("show");
+            }
+        });
+    },{threshold:0.2});
+
+    document.querySelectorAll(".card").forEach(c=>observer.observe(c));
+
+});
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

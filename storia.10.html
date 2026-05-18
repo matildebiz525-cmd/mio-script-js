@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rosalind Franklin | Eredità scientifica</title>
+
+<style>
+
+/* =========================
+   VARIABILI
+========================= */
+
+:root{
+    --bg1: rgb(182,220,194);
+    --bg2: rgb(153,199,168);
+    --card: rgba(255,255,255,0.25);
+    --text: #1a1a1a;
+    --accent: #1f7a5a;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body{
+    margin:0;
+    font-family:system-ui, Arial, sans-serif;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    color:var(--text);
+    scroll-behavior:smooth;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.4);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:15px;
+    z-index:1000;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1a1a1a;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+#container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:40px;
+    background:var(--card);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.15);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+#container.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   TITOLI
+========================= */
+
+h1{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:40px;
+    font-style:italic;
+    opacity:0.8;
+}
+
+/* =========================
+   SEZIONI
+========================= */
+
+.section{
+    margin-bottom:30px;
+    padding:25px;
+    background:rgba(255,255,255,0.25);
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.section:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   TESTO
+========================= */
+
+p, li{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* =========================
+   IMMAGINE
+========================= */
+
+img{
+    width:100%;
+    border-radius:15px;
+    margin-top:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   CURIOSTITÀ
+========================= */
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input{
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+}
+
+button{
+    padding:12px;
+    background:var(--accent);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+    background:#155a42;
+}
+
+/* =========================
+   MODALE
+========================= */
+
+#modal{
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#modal div{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+    h1{font-size:36px;}
+    #container{padding:20px;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#intro">Introduzione</a>
+    <a href="#curiosita">Curiosità</a>
+    <a href="#eredita">Eredità</a>
+    <a href="#iscrizione">Iscriviti</a>
+</nav>
+
+<div id="container">
+
+<h1>Rosalind Franklin</h1>
+<div class="subtitle">La scienziata che ha contribuito alla scoperta del DNA</div>
+
+<!-- INTRO -->
+<div class="section" id="intro">
+<p>
+Rosalind Franklin è stata una chimica e cristallografa fondamentale per la scoperta della struttura del DNA.
+Il suo lavoro ha fornito dati essenziali per il modello della doppia elica.
+</p>
+</div>
+
+<!-- CURIOSTITÀ -->
+<div class="section" id="curiosita">
+
+<h2>Curiosità</h2>
+
+<ul>
+<li>Morì nel 1958 a soli 37 anni a causa di un tumore alle ovaie probabilmente legato ai raggi X.</li>
+<li>Non vide il Premio Nobel assegnato a Watson, Crick e Wilkins.</li>
+<li>I suoi dati furono fondamentali per la struttura del DNA.</li>
+<li>Il suo ruolo è ancora oggi oggetto di dibattito scientifico.</li>
+<li>Anne Sayre pubblicò la prima biografia su di lei nel 1975.</li>
+<li>Watson la descrisse negativamente ne *La doppia elica*.</li>
+<li>Brenda Maddox ne rivalutò la figura nel 2002.</li>
+<li>Oggi è riconosciuta come figura chiave della biologia molecolare.</li>
+</ul>
+
+<img src="foto.8.jpg" alt="Rosalind Franklin">
+
+</div>
+
+<!-- EREDITÀ -->
+<div class="section" id="eredita">
+
+<h2>Eredità scientifica</h2>
+
+<p>
+Rosalind Franklin è oggi considerata una delle scienziate più importanti del XX secolo.
+Il suo contributo ha cambiato la biologia moderna e rappresenta un simbolo di rigore scientifico e riconoscimento mancato.
+</p>
+
+</div>
+
+<!-- ISCRIZIONE -->
+<div class="section" id="iscrizione">
+
+<h2>Ricevi aggiornamenti</h2>
+
+<form onsubmit="return showModal()">
+
+<input type="text" placeholder="Nome" required>
+<input type="text" placeholder="Cognome" required>
+<input type="email" placeholder="Email" required>
+
+<label>
+<input type="checkbox" required>
+Accetto di ricevere aggiornamenti
+</label>
+
+<button type="submit">Iscriviti</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- MODALE -->
+<div id="modal">
+    <div>
+        <h3>Iscrizione completata!</h3>
+        <p>Grazie per esserti iscritto.</p>
+        <button onclick="closeModal()">Chiudi</button>
+    </div>
+</div>
+
+<script>
+
+// animazione ingresso
+window.onload = () => {
+    document.getElementById("container").classList.add("show");
+};
+
+// modale
+function showModal(){
+    document.getElementById("modal").style.display = "flex";
+    return false;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

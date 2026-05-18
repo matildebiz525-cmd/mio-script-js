@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<title>Rosalind Franklin</title>
+
+<style>
+
+
+
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+    135deg,
+    rgb(153,199,168),
+    rgb(182,220,194)
+    );
+
+    overflow-x:hidden;
+}
+
+
+.container{
+
+    width:80%;
+    max-width:1000px;
+
+    margin:60px auto;
+    padding:40px;
+
+    background: rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(8px);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.2),
+    0 0 40px rgba(255,255,255,0.1);
+
+    animation: comparsa 1.5s ease;
+}
+
+
+
+@keyframes comparsa{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+h1{
+
+    text-align:center;
+
+    font-size:55px;
+
+    color:rgb(20,20,20);
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    2px 2px 8px rgba(255,255,255,0.5);
+
+    animation: luce 3s infinite alternate;
+}
+
+/* Effetto luce */
+
+@keyframes luce{
+
+    from{
+        text-shadow:
+        0 0 10px white;
+    }
+
+    to{
+        text-shadow:
+        0 0 20px rgb(0,120,90);
+    }
+}
+
+
+
+h3{
+
+    font-family:'Calibri Light';
+
+    font-size:22px;
+
+    text-align:justify;
+
+    line-height:1.9;
+
+    color:rgb(30,30,30);
+
+    font-style:italic;
+
+    padding:20px;
+
+    border-left:6px solid rgb(0,120,90);
+
+    background:rgba(255,255,255,0.25);
+
+    border-radius:15px;
+
+    transition:0.5s;
+}
+
+
+
+h3:hover{
+
+    transform:scale(1.01);
+
+    box-shadow:
+    0 0 20px rgba(0,120,90,0.3);
+}
+
+
+
+a{
+
+    display:block;
+
+    width:300px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+    45deg,
+    rgb(0,120,90),
+    rgb(0,170,130)
+    );
+
+    transition:0.4s;
+
+    box-shadow:
+    0 0 15px rgba(0,0,0,0.3);
+}
+
+
+
+a:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 25px rgba(0,120,90,0.7);
+
+    letter-spacing:1px;
+}
+
+
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.15);
+
+    animation: float 10s infinite ease-in-out;
+}
+
+
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="circle"
+style="
+width:120px;
+height:120px;
+top:50px;
+left:60px;">
+</div>
+
+<div class="circle"
+style="
+width:180px;
+height:180px;
+bottom:80px;
+right:80px;
+animation-duration:14s;">
+</div>
+
+<div class="circle"
+style="
+width:90px;
+height:90px;
+top:300px;
+right:200px;
+animation-duration:8s;">
+</div>
+
+
+
+<div class="container">
+
+<h1>Rosalind Franklin</h1>
+
+<h3>
+
+Oggi vogliamo raccontarvi la storia di una scienziata straordinaria, 
+il cui lavoro ha cambiato per sempre il modo in cui comprendiamo la vita… 
+ma il cui nome, per molto tempo, è rimasto nell’ombra.
+
+<br><br>
+
+Rosalind Franklin non è solo una figura della scienza: 
+è anche il simbolo di quanto il talento possa essere sottovalutato 
+e di quanto alcune scoperte possano avere una storia più complessa 
+di quanto immaginiamo.
+
+<br><br>
+
+Grazie ai suoi studi sulla cristallografia a raggi X, contribuì in modo decisivo
+alla scoperta della struttura del DNA.
+
+<br><br>
+
+Per molti anni il suo contributo non ricevette il riconoscimento meritato,
+ma oggi Rosalind Franklin è considerata una delle donne più importanti
+nella storia della scienza.
+
+<br><br>
+
+<b>Ma cosa ha fatto esattamente?
+E perché ancora oggi si parla di lei?</b>
+
+</h3>
+
+<a href="storia.2_html.html">
+Clicca per saperne di più
+</a>
+
+</div>
+
+</body>
+</html>

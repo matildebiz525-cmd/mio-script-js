@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<title>Rosalind Franklin</title>
+
+<style>
+
+/* =========================
+   SFONDO
+========================= */
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg, rgb(182,220,194), rgb(153,199,168));
+    color:#1b1b1b;
+    overflow-x:hidden;
+}
+
+/* =========================
+   CONTENITORE
+========================= */
+
+#container{
+    max-width:1150px;
+    margin:40px auto;
+    padding:40px;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s ease;
+}
+
+#container.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   TITOLO
+========================= */
+
+h1{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:25px;
+    color:#0b3d2e;
+    letter-spacing:2px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.content{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   TESTO
+========================= */
+
+.text{
+    flex:2;
+    font-size:18px;
+    line-height:1.9;
+    text-align:justify;
+
+    background: rgba(255,255,255,0.35);
+    padding:25px;
+    border-radius:20px;
+}
+
+/* =========================
+   TITOLI
+========================= */
+
+h2{
+    color:#0b6b4a;
+    border-left:5px solid #0b6b4a;
+    padding-left:10px;
+}
+
+/* =========================
+   IMMAGINI
+========================= */
+
+.image{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    align-items:center;
+}
+
+.image img{
+    width:100%;
+    max-width:340px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    transition:0.5s;
+}
+
+.image img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+    .content{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>Rosalind Franklin</h1>
+
+<div class="content">
+
+<!-- TESTO -->
+<div class="text">
+
+<h2>Introduzione</h2>
+
+Rosalind Franklin è stata una chimica e cristallografa britannica, tra le figure più importanti della biologia molecolare del Novecento. Il suo lavoro ha avuto un ruolo decisivo nella comprensione della struttura del DNA, una delle scoperte scientifiche più rivoluzionarie della storia della biologia.
+
+<br><br>
+
+Grazie alle sue ricerche nella diffrazione a raggi X, riuscì a produrre immagini estremamente precise delle molecole, fondamentali per comprendere il DNA.
+
+<br><br>
+
+<h2>Contesto storico</h2>
+
+Operò tra gli anni ’40 e ’50 del XX secolo, in un periodo di grande sviluppo della genetica e della biologia molecolare.
+
+<br><br>
+
+<h2>Perché è importante?</h2>
+
+Le sue immagini furono decisive per comprendere la struttura a doppia elica del DNA.
+
+<br><br>
+
+Il suo contributo fu fondamentale per il modello di Watson e Crick, anche se riconosciuto solo in parte e più tardi.
+
+<br><br>
+
+Oggi è simbolo del rigore scientifico e del riconoscimento del lavoro delle donne nella scienza.
+
+<br><br>
+
+<a class="btn" href="https://it.wikipedia.org/wiki/Rosalind_Franklin" target="_blank"
+style="
+display:inline-block;
+margin-top:15px;
+padding:12px 18px;
+background:#0b6b4a;
+color:white;
+text-decoration:none;
+border-radius:10px;
+transition:0.3s;
+">
+Approfondisci
+</a>
+
+</div>
+
+<!-- IMMAGINI -->
+<div class="image">
+
+    <img src="foto.3.jpg" alt="Rosalind Franklin">
+    <img src="immagine1.jpg" alt="Rosalind Franklin laboratorio">
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+window.onload = () => {
+    document.getElementById("container").classList.add("show");
+};
+
+</script>
+
+</body>
+</html>

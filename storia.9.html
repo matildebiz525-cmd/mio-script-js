@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rosalind Franklin - Le Controversie</title>
+
+<style>
+
+body{
+
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background: linear-gradient(135deg, rgb(182,220,194), rgb(153,199,168));
+
+    color:rgb(20,20,20);
+    overflow-x:hidden;
+}
+
+/* CONTENITORE */
+
+#container{
+
+    max-width:1000px;
+    margin:50px auto;
+    padding:40px;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+
+    border-radius:25px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+#container.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* TITOLO */
+
+h1{
+
+    text-align:center;
+    font-size:52px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 10px rgba(255,255,255,0.7);
+
+    animation:luce 3s infinite alternate;
+}
+
+/* IMMAGINE */
+
+.img-container{
+    display:flex;
+    justify-content:center;
+    margin:20px 0 40px 0;
+}
+
+.img-container img{
+
+    width:80%;
+    max-width:600px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+
+    transition:0.4s ease;
+}
+
+.img-container img:hover{
+    transform:scale(1.03);
+}
+
+/* TESTO */
+
+.text{
+
+    font-size:20px;
+    line-height:2;
+    text-align:justify;
+
+    padding:30px;
+
+    background:rgba(255,255,255,0.30);
+    border-radius:20px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+/* CITAZIONE */
+
+.quote{
+
+    margin:30px 0;
+    padding:25px;
+
+    font-size:24px;
+    font-style:italic;
+
+    text-align:center;
+
+    border-left:5px solid rgb(0,120,90);
+
+    background:rgba(255,255,255,0.25);
+
+    border-radius:15px;
+
+    color:rgb(0,90,70);
+}
+
+/* CONCLUSIONE */
+
+.final{
+
+    margin-top:40px;
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+    font-size:22px;
+
+    background:rgba(255,255,255,0.25);
+
+}
+
+/* ANIMAZIONE */
+
+@keyframes luce{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 20px rgb(0,120,90); }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>Le Controversie</h1>
+
+    <!-- FOTO INSERITA -->
+    <div class="img-container">
+        <img src="foto.2.jpg" alt="Rosalind Franklin">
+    </div>
+
+    <div class="text">
+
+        <p>Rosalind Franklin era nota per il suo carattere prudente, preciso e diligente. Nonostante ciò, ebbe un forte conflitto con Maurice Wilkins che influenzò profondamente la sua carriera.</p>
+
+        <p>Nel gennaio 1953, senza il suo consenso, Wilkins mostrò la celebre Fotografia 51 a James Watson, che insieme a Francis Crick la utilizzò per costruire il modello del DNA.</p>
+
+        <div class="quote">
+            “La mia mascella si spalancò e il mio polso cominciò ad accelerare.”
+        </div>
+
+        <p>Il modello della doppia elica venne pubblicato su <b>Nature</b> nel 1953.</p>
+
+        <p>Nel 1962 Watson, Crick e Wilkins ricevettero il Premio Nobel, mentre Rosalind Franklin non venne inclusa.</p>
+
+        <p>Nel marzo 1953 lasciò il King’s College e si trasferì al Birkbeck College, dove si dedicò allo studio dei virus.</p>
+
+        <p>Nel 1956 le fu diagnosticato un tumore alle ovaie, probabilmente causato dall’esposizione ai raggi X.</p>
+
+        <p>Morì il 16 aprile 1958 a soli 37 anni.</p>
+
+    </div>
+
+    <div class="final">
+
+        Oggi Rosalind Franklin è riconosciuta come una delle figure più importanti della biologia molecolare e simbolo del contributo femminile alla scienza.
+
+    </div>
+
+</div>
+
+<script>
+
+window.onload = function(){
+    document.getElementById("container").classList.add("show");
+};
+
+</script>
+
+</body>
+</html>

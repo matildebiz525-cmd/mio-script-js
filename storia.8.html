@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Donne nella Scienza</title>
+
+<style>
+
+/* =========================
+   SFONDO
+========================= */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+
+    background: linear-gradient(135deg, rgb(182,220,194), rgb(145,190,165));
+    color:rgb(20,20,20);
+    overflow-x:hidden;
+}
+
+/* =========================
+   CONTENITORE
+========================= */
+
+#container{
+    width:88%;
+    max-width:1250px;
+    margin:40px auto;
+    padding:45px;
+
+    background:rgba(255,255,255,0.22);
+    backdrop-filter:blur(14px);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,0.15),
+    0 0 45px rgba(255,255,255,0.1);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+#container.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   TITOLO
+========================= */
+
+h1{
+    text-align:center;
+    font-size:56px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+    animation:glow 3s infinite alternate;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:45px;
+    color:rgb(60,60,60);
+    font-style:italic;
+}
+
+/* =========================
+   INTRO + FINALE
+========================= */
+
+.intro, .finale{
+    background:rgba(255,255,255,0.28);
+    padding:30px;
+    border-radius:25px;
+    line-height:1.9;
+    font-size:18px;
+    text-align:justify;
+    margin-bottom:40px;
+    box-shadow:0 0 18px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.intro:hover, .finale:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(0,120,90,0.2);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-bottom:45px;
+}
+
+.card{
+    background:rgba(255,255,255,0.32);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 18px rgba(0,0,0,0.1);
+    transition:0.4s;
+    padding-bottom:20px;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 30px rgba(0,120,90,0.25);
+}
+
+/* =========================
+   IMMAGINI
+========================= */
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-bottom:4px solid rgba(0,120,90,0.4);
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* =========================
+   CORREZIONE VOLTI
+========================= */
+
+.card:nth-child(2) img{
+    object-position: top;
+}
+
+.card:nth-child(3) img{
+    object-position: center top;
+}
+
+.card:nth-child(4) img{
+    object-position: top;
+}
+
+.card:nth-child(5) img{
+    object-position: center;
+}
+
+.card:nth-child(6) img{
+    object-position: top;
+}
+
+/* =========================
+   TESTO CARD
+========================= */
+
+.card h2{
+    text-align:center;
+    margin:15px 0 10px 0;
+    color:rgb(0,90,70);
+}
+
+.card p{
+    padding:0 18px;
+    line-height:1.8;
+    text-align:justify;
+    font-size:16px;
+}
+
+/* =========================
+   HIGHLIGHT PAROLE
+========================= */
+
+.highlight{
+    transition:0.3s;
+}
+
+.highlight:hover{
+    color:rgb(0,120,90);
+    text-shadow:0 0 6px rgba(0,120,90,0.5);
+}
+
+/* =========================
+   ANIMAZIONE
+========================= */
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 25px rgb(0,120,90); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    h1{ font-size:40px; }
+
+    .intro, .finale{ font-size:16px; }
+
+    #container{
+        width:92%;
+        padding:25px;
+    }
+
+    .card img{
+        height:200px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>Donne nella Scienza</h1>
+
+    <div class="subtitle">
+        Una storia di scoperte, coraggio e determinazione
+    </div>
+
+    <!-- INTRO -->
+
+    <div class="intro" id="intro">
+        La Giornata Internazionale delle Donne nella Scienza nasce per valorizzare il ruolo femminile nelle discipline STEM e ricordare il contributo delle scienziate nella storia.
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="foto.12.jpg" alt="Marie Curie">
+            <h2>Marie Curie</h2>
+            <p>Pioniera della radioattività e prima donna a vincere due Premi Nobel.</p>
+        </div>
+
+        <div class="card">
+            <img src="foto.13.jpg" alt="Ada Lovelace">
+            <h2>Ada Lovelace</h2>
+            <p>Considerata la prima programmatrice della storia dell’informatica.</p>
+        </div>
+
+        <div class="card">
+            <img src="foto.14.jpg" alt="Mary Anning">
+            <h2>Mary Anning</h2>
+            <p>Le sue scoperte rivoluzionarono la paleontologia moderna.</p>
+        </div>
+
+        <div class="card">
+            <img src="foto.15.jpg" alt="Katharine McCormick">
+            <h2>Katharine McCormick</h2>
+            <p>Finanziò la ricerca della pillola anticoncezionale.</p>
+        </div>
+
+        <div class="card">
+            <img src="foto.16.jpg" alt="Donne NASA">
+            <h2>Donne della NASA</h2>
+            <p>Katherine Johnson, Dorothy Vaughan e Mary Jackson cambiarono la storia dello spazio.</p>
+        </div>
+
+    </div>
+
+    <!-- FINALE -->
+
+    <div class="finale" id="finale">
+        Le donne nella scienza hanno contribuito in modo fondamentale al progresso umano. Valorizzarle significa costruire un futuro più equo e innovativo.
+    </div>
+
+</div>
+
+<script>
+
+window.addEventListener("load", () => {
+
+    document.getElementById("container").classList.add("show");
+
+    const elementi = document.querySelectorAll("#intro, #finale, .card p");
+
+    elementi.forEach(el => {
+        const parole = el.innerHTML.split(" ");
+        el.innerHTML = parole.map(p => `<span class="highlight">${p}</span>`).join(" ");
+    });
+
+});
+
+</script>
+
+</body>
+</html>

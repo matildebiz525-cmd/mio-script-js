@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Rosalind Franklin</title>
+
+<style>
+
+/* ===== BASE ===== */
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background: radial-gradient(circle at top,
+        rgb(200,240,210),
+        rgb(140,190,170),
+        rgb(90,140,120)
+    );
+    color:#1a1a1a;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:30px;
+}
+
+/* ===== HEADER ===== */
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+h1{
+    font-size:50px;
+    margin:0;
+    color:#0f2e25;
+    animation: glow 3s infinite alternate;
+}
+
+.subtitle{
+    opacity:0.7;
+    margin-top:10px;
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:30px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background: rgba(255,255,255,0.25);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== TIMELINE ===== */
+.timeline{
+    margin-top:20px;
+    border-left:3px solid green;
+    padding-left:20px;
+}
+
+.event{
+    margin-bottom:15px;
+    position:relative;
+}
+
+.event::before{
+    content:'';
+    width:10px;
+    height:10px;
+    background:green;
+    position:absolute;
+    left:-27px;
+    top:5px;
+    border-radius:50%;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ===== ANIMAZIONE ===== */
+@keyframes glow{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 25px green; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Rosalind Franklin</h1>
+        <div class="subtitle">Pioniera della struttura del DNA</div>
+    </div>
+
+    <div class="grid">
+
+        <!-- TESTO -->
+        <div class="card">
+
+            <p>
+            Rosalind Franklin nacque a Londra in una famiglia benestante di origine ebraica.
+            Fin da giovane mostrò una forte inclinazione per le scienze.
+            </p>
+
+            <p>
+            Studiò a Cambridge laureandosi in chimica e fisica.
+            Dopo la guerra lavorò a Parigi specializzandosi nella diffrazione ai raggi X.
+            </p>
+
+            <p>
+            Al King’s College realizzò immagini fondamentali del DNA che permisero di comprendere la doppia elica.
+            I suoi dati furono usati senza consenso da Watson e Crick.
+            </p>
+
+            <p>
+            Morì nel 1958. Oggi è riconosciuta come una figura chiave della biologia molecolare.
+            </p>
+
+            <!-- TIMELINE -->
+            <div class="timeline">
+
+                <div class="event"><b>1920</b> – Nascita</div>
+                <div class="event"><b>1941</b> – Cambridge</div>
+                <div class="event"><b>1947</b> – Parigi</div>
+                <div class="event"><b>1951</b> – King’s College</div>
+                <div class="event"><b>1958</b> – Morte</div>
+                <div class="event"><b>1962</b> – Nobel senza di lei</div>
+
+            </div>
+
+        </div>
+
+        <!-- IMMAGINI -->
+        <div class="card gallery">
+            <img src="foto.4.jpg">
+            <img src="foto.5.jpg">
+            <img src="foto.6.jpg">
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+ 
+  </head>
+<style>
+    body {
+  background-color: Wheat;
+}
+
+h1 {
+  color: rgb(2, 2, 2);
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+img{
+  border-style:ridge;
+  height:309px;
+
+  margin: 8px; ;
+  margin-right:20px;
+  float:right;
+
+}
+#testo{
+  font-family: 'Calibri Light';
+  font-size:14px;
+  text-align:justify;
+  font-style:italic;
+  padding-right:30px;
+  padding-top:5px;
+}
+</style>
+
+</head>
+<body>
+
+  <img src="miami.jpg">
+  <div id="testo"></div>
+<h2>Dove si trova?</h2>
+<h3>Miami, una città che cattura l'immaginazione con la sua bellezza unica e affascinante.
+     Questo angolo di paradiso situato sulla costa sud-orientale della Florida incanta i visitatori
+      con il suo clima tropicale, paesaggi mozzafiato e anima vivace.
+       La bellezza di Miami è una combinazione di elementi naturali e influenze culturali
+        che rendono questa città un luogo straordinario.
+        Le spiagge di Miami sono senza dubbio uno dei suoi tesori più preziosi.
+         Con le loro sabbie bianche e l'acqua turchese dell'oceano Atlantico,
+          le spiagge come South Beach, Miami Beach e Key Biscayne offrono scenari da cartolina. 
+          Il sole splende quasi tutto l'anno, permettendo ai residenti e ai visitatori di godere
+           di una vita all'aria aperta in ogni stagione. Le palme, le cabine colorate e il lungomare
+            vivace conferiscono a queste spiagge un'atmosfera unica, dove la bellezza naturale si
+             fonde con l'energia cosmopolita.
+             Miami è anche famosa per il suo eclettico mix di architettura.
+              I quartieri come Art Deco Historic District a South Beach presentano 
+              edifici storici con sfumature pastello e design accattivanti.</h3>
+           
+               
+    
+             
+
+</body>
+
+  
+
+
+</html>
